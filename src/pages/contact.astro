@@ -1,0 +1,120 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import { SITE } from "../lib/site";
+---
+
+<BaseLayout
+	title="Contact — Tom Goarin, sites web et SEO à Lyon"
+	description="Parlons de votre projet. Email direct ou formulaire — réponse rapide. Basé à Lyon, intervention en région."
+>
+	<section>
+		<div class="mx-auto max-w-2xl px-6 py-20 sm:py-28">
+			<p class="text-sm font-medium uppercase tracking-[0.18em] text-[var(--color-forest)]">
+				Contact
+			</p>
+			<h1
+				class="mt-4 font-serif text-4xl font-medium leading-[1.1] tracking-tight text-[var(--color-text)] text-balance sm:text-5xl"
+			>
+				Parlons de votre projet.
+			</h1>
+			<p class="mt-6 text-lg leading-relaxed text-[var(--color-muted)]">
+				Quelques lignes sur votre activité et ce que vous cherchez — je reviens vers vous sous
+				48 heures, en semaine.
+			</p>
+
+			<form
+				action={`mailto:${SITE.email}`}
+				method="post"
+				enctype="text/plain"
+				class="mt-12 grid gap-6"
+			>
+				<div class="grid gap-2">
+					<label for="name" class="text-sm font-medium text-[var(--color-text)]">
+						Votre nom
+					</label>
+					<input
+						type="text"
+						id="name"
+						name="Nom"
+						required
+						autocomplete="name"
+						class="rounded-sm border border-[var(--color-line)] bg-[var(--color-surface)] px-4 py-3 text-base text-[var(--color-text)] focus:border-[var(--color-forest)] focus:outline-none"
+					/>
+				</div>
+
+				<div class="grid gap-2">
+					<label for="email" class="text-sm font-medium text-[var(--color-text)]">
+						Votre email
+					</label>
+					<input
+						type="email"
+						id="email"
+						name="Email"
+						required
+						autocomplete="email"
+						class="rounded-sm border border-[var(--color-line)] bg-[var(--color-surface)] px-4 py-3 text-base text-[var(--color-text)] focus:border-[var(--color-forest)] focus:outline-none"
+					/>
+				</div>
+
+				<div class="grid gap-2">
+					<label for="message" class="text-sm font-medium text-[var(--color-text)]">
+						Votre message
+					</label>
+					<textarea
+						id="message"
+						name="Message"
+						required
+						rows="6"
+						class="resize-y rounded-sm border border-[var(--color-line)] bg-[var(--color-surface)] px-4 py-3 text-base text-[var(--color-text)] focus:border-[var(--color-forest)] focus:outline-none"
+					></textarea>
+				</div>
+
+				<div class="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
+					<button
+						type="submit"
+						class="inline-flex items-center justify-center rounded-sm bg-[var(--color-ink)] px-5 py-3 text-sm font-medium tracking-tight text-[var(--color-paper)] transition-colors duration-150 hover:bg-[var(--color-ink-2)]"
+					>
+						Envoyer
+					</button>
+					<p class="text-xs text-[var(--color-faint)]">
+						Ouvre votre client mail. Aucun envoi automatique.
+					</p>
+				</div>
+			</form>
+
+			<div class="mt-16 border-t border-[var(--color-line)] pt-10">
+				<h2 class="font-serif text-xl font-medium text-[var(--color-text)]">Ou directement</h2>
+				<dl class="mt-6 grid gap-5 text-base text-[var(--color-muted)]">
+					<div class="flex flex-col gap-1 sm:flex-row sm:items-baseline sm:gap-4">
+						<dt class="w-32 text-xs font-medium uppercase tracking-[0.14em] text-[var(--color-faint)]">
+							Email
+						</dt>
+						<dd>
+							<a
+								href={`mailto:${SITE.email}`}
+								class="text-[var(--color-forest)] underline decoration-1 underline-offset-4 hover:text-[var(--color-forest-2)]"
+							>
+								{SITE.email}
+							</a>
+						</dd>
+					</div>
+					<div class="flex flex-col gap-1 sm:flex-row sm:items-baseline sm:gap-4">
+						<dt class="w-32 text-xs font-medium uppercase tracking-[0.14em] text-[var(--color-faint)]">
+							Téléphone
+						</dt>
+						<dd>
+							{/* [TÉLÉPHONE À AJOUTER] */}
+							<span class="text-[var(--color-faint)]">À venir</span>
+						</dd>
+					</div>
+					<div class="flex flex-col gap-1 sm:flex-row sm:items-baseline sm:gap-4">
+						<dt class="w-32 text-xs font-medium uppercase tracking-[0.14em] text-[var(--color-faint)]">
+							Zone
+						</dt>
+						<dd>Lyon et région Auvergne-Rhône-Alpes</dd>
+					</div>
+				</dl>
+			</div>
+		</div>
+	</section>
+</BaseLayout>

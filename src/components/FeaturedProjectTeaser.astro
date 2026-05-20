@@ -1,0 +1,61 @@
+---
+import Button from "./Button.astro";
+---
+
+<section class="border-b border-[var(--color-line)]">
+	<div class="mx-auto max-w-5xl px-6 py-20 sm:py-24">
+		<p class="text-sm font-medium uppercase tracking-[0.18em] text-[var(--color-forest)]">
+			Réalisation
+		</p>
+
+		<h2
+			class="mt-3 font-serif text-3xl font-medium tracking-tight text-[var(--color-text)] sm:text-4xl"
+		>
+			Une réalisation qui parle pour moi
+		</h2>
+
+		<div class="mt-10 grid gap-10 sm:grid-cols-5 sm:items-start">
+			<div class="sm:col-span-3">
+				<p class="text-lg leading-relaxed text-[var(--color-muted)]">
+					<span class="font-medium text-[var(--color-text)]">Sheeesh</span> — une application
+					événementielle développée pour le festival des 24h de l'INSA Lyon. Lead développeur
+					d'une équipe de quatre étudiants, j'ai conçu le cœur applicatif : système d'événements,
+					challenges, équipes, posts, et isolation multi-univers.
+				</p>
+				<div class="mt-8">
+					<Button href="/projet-phare" variant="secondary">Voir le projet en détail</Button>
+				</div>
+			</div>
+
+			<dl class="sm:col-span-2 grid grid-cols-2 gap-6 sm:gap-8">
+				<div>
+					<dt class="text-xs font-medium uppercase tracking-[0.14em] text-[var(--color-faint)]">
+						Rôle
+					</dt>
+					<dd class="mt-2 font-serif text-lg text-[var(--color-ink)]">Lead dev</dd>
+				</div>
+				<div>
+					<dt class="text-xs font-medium uppercase tracking-[0.14em] text-[var(--color-faint)]">
+						Équipe
+					</dt>
+					<dd class="mt-2 font-serif text-lg text-[var(--color-ink)]">4 étudiants</dd>
+				</div>
+				<div>
+					<dt class="text-xs font-medium uppercase tracking-[0.14em] text-[var(--color-faint)]">
+						Contexte
+					</dt>
+					<dd class="mt-2 font-serif text-lg text-[var(--color-ink)]">24h INSA Lyon</dd>
+				</div>
+				<div>
+					<dt class="text-xs font-medium uppercase tracking-[0.14em] text-[var(--color-faint)]">
+						Stack
+					</dt>
+					<dd class="mt-2 font-serif text-lg text-[var(--color-ink)]">
+						{/* [STACK À CONFIRMER] */}
+						React
+					</dd>
+				</div>
+			</dl>
+		</div>
+	</div>
+</section>

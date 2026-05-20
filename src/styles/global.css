@@ -1,1 +1,52 @@
 @import "tailwindcss";
+
+@theme {
+	--font-sans: "Inter", ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+	--font-serif: "Fraunces", ui-serif, Georgia, Cambria, "Times New Roman", serif;
+
+	--color-ink: #0B1F3A;
+	--color-ink-2: #13315C;
+	--color-forest: #1B4332;
+	--color-forest-2: #102E22;
+	--color-paper: #FAFAF7;
+	--color-surface: #FFFFFF;
+	--color-line: #E5E3DC;
+	--color-text: #141414;
+	--color-muted: #4A4A4A;
+	--color-faint: #737373;
+}
+
+@layer base {
+	html {
+		font-family: var(--font-sans);
+		color: var(--color-text);
+		background-color: var(--color-paper);
+		-webkit-font-smoothing: antialiased;
+		text-rendering: optimizeLegibility;
+	}
+
+	body {
+		font-feature-settings: "ss01", "cv11";
+	}
+
+	h1, h2, h3, h4 {
+		font-family: var(--font-serif);
+		font-feature-settings: "ss01";
+		letter-spacing: -0.01em;
+	}
+
+	a {
+		color: inherit;
+	}
+
+	:focus-visible {
+		outline: 2px solid var(--color-forest);
+		outline-offset: 3px;
+		border-radius: 2px;
+	}
+
+	::selection {
+		background-color: var(--color-ink);
+		color: var(--color-paper);
+	}
+}

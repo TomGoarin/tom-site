@@ -1,0 +1,47 @@
+---
+const steps = [
+	{
+		n: "01",
+		title: "On discute de votre activité",
+		body:
+			"Un appel ou un café à Lyon. Je comprends ce que vous faites, qui vous cherchez à toucher, et ce qui vous distingue.",
+	},
+	{
+		n: "02",
+		title: "Je conçois et développe",
+		body:
+			"Maquette, validation, développement. Vous voyez l'avancement à chaque étape. Pas de surprise à la livraison.",
+	},
+	{
+		n: "03",
+		title: "Vous êtes en ligne et visible",
+		body:
+			"Mise en ligne, indexation Google, suivi des premières semaines. Je reste joignable pour les ajustements.",
+	},
+];
+---
+
+<section class="border-b border-[var(--color-line)] bg-[var(--color-surface)]">
+	<div class="mx-auto max-w-5xl px-6 py-20 sm:py-24">
+		<h2 class="font-serif text-2xl font-medium tracking-tight text-[var(--color-text)] sm:text-3xl">
+			Comment ça marche
+		</h2>
+		<div class="mt-1 h-px w-12 bg-[var(--color-forest)]" aria-hidden="true"></div>
+
+		<ol class="mt-12 grid gap-12 sm:grid-cols-3">
+			{steps.map((step) => (
+				<li>
+					<p
+						class="font-serif text-3xl font-medium text-[var(--color-forest)] tracking-tight"
+					>
+						{step.n}
+					</p>
+					<p class="mt-4 font-serif text-xl font-medium text-[var(--color-text)]">
+						{step.title}
+					</p>
+					<p class="mt-3 text-base leading-relaxed text-[var(--color-muted)]">{step.body}</p>
+				</li>
+			))}
+		</ol>
+	</div>
+</section>

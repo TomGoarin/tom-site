@@ -1,11 +1,23 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
 import Hero from "../components/Hero.astro";
+import ForWho from "../components/ForWho.astro";
+import Benefits from "../components/Benefits.astro";
+import HowItWorks from "../components/HowItWorks.astro";
+import FeaturedProjectTeaser from "../components/FeaturedProjectTeaser.astro";
+import CtaBanner from "../components/CtaBanner.astro";
+import { PROFESSIONAL_SERVICE_JSONLD } from "../lib/site";
 ---
 
 <BaseLayout
-	title="Tom Goarin — Sites web pour avocats indépendants"
-	description="Je crée des sites internet sobres et bien référencés pour les avocats indépendants et les petits cabinets en France."
+	title="Tom Goarin — Sites web et SEO pour indépendants, PME et associations à Lyon"
+	description="Création de sites internet sobres, rapides et bien référencés. Pour les indépendants, PME et associations qui veulent être trouvés sur Google."
+	jsonLd={PROFESSIONAL_SERVICE_JSONLD}
 >
 	<Hero />
+	<ForWho />
+	<Benefits />
+	<HowItWorks />
+	<FeaturedProjectTeaser />
+	<CtaBanner />
 </BaseLayout>
