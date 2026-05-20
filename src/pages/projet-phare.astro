@@ -1,0 +1,135 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import CtaBanner from "../components/CtaBanner.astro";
+
+const jsonLd = {
+	"@context": "https://schema.org",
+	"@type": "CreativeWork",
+	name: "Sheeesh",
+	about: "Application événementielle pour le festival des 24h de l'INSA Lyon",
+	creator: {
+		"@type": "Person",
+		name: "Tom Goarin",
+	},
+	dateCreated: "2024", // [À CONFIRMER]
+};
+---
+
+<BaseLayout
+	title="Sheeesh — Application événementielle 24h INSA Lyon | Tom Goarin"
+	description="Sheeesh : application événementielle développée pour le festival des 24h de l'INSA Lyon. Lead développeur d'une équipe de 4. Challenges, équipes, posts, isolation multi-univers."
+	ogType="article"
+	jsonLd={jsonLd}
+>
+	<article>
+		<header class="border-b border-[var(--color-line)]">
+			<div class="mx-auto max-w-3xl px-6 py-20 sm:py-28">
+				<p class="text-sm font-medium uppercase tracking-[0.18em] text-[var(--color-forest)]">
+					Projet phare
+				</p>
+				<h1
+					class="mt-4 font-serif text-4xl font-medium leading-[1.1] tracking-tight text-[var(--color-text)] text-balance sm:text-5xl"
+				>
+					Sheeesh — l'application des 24h de l'INSA Lyon
+				</h1>
+				<p class="mt-6 text-lg leading-relaxed text-[var(--color-muted)] sm:text-xl">
+					Une application événementielle conçue pour fédérer plusieurs milliers de participants
+					autour d'un festival étudiant. Développée en équipe de quatre, en tant que lead développeur.
+				</p>
+			</div>
+		</header>
+
+		<section class="border-b border-[var(--color-line)] bg-[var(--color-surface)]">
+			<div class="mx-auto grid max-w-3xl gap-16 px-6 py-20 sm:py-24">
+				<div>
+					<h2 class="font-serif text-2xl font-medium tracking-tight text-[var(--color-text)]">
+						Le contexte
+					</h2>
+					<div class="mt-1 h-px w-12 bg-[var(--color-forest)]" aria-hidden="true"></div>
+					<p class="mt-6 text-base leading-relaxed text-[var(--color-muted)] sm:text-lg">
+						Les 24h de l'INSA Lyon sont l'un des plus gros festivals étudiants de France :
+						une course, des concerts, des animations, et plusieurs dizaines de milliers de
+						visiteurs sur le campus. L'organisation avait besoin d'une application dédiée
+						pour faire vivre l'événement aux participants — au-delà du simple programme :
+						défis à relever, équipes à former, posts à partager, classement en temps réel.
+					</p>
+				</div>
+
+				<div>
+					<h2 class="font-serif text-2xl font-medium tracking-tight text-[var(--color-text)]">
+						Mon rôle
+					</h2>
+					<div class="mt-1 h-px w-12 bg-[var(--color-forest)]" aria-hidden="true"></div>
+					<p class="mt-6 text-base leading-relaxed text-[var(--color-muted)] sm:text-lg">
+						Lead développeur dans une équipe de quatre étudiants. J'ai conçu l'architecture
+						applicative, structuré le modèle de données et porté la majorité du code produit.
+						Mes trois coéquipiers ont pris en charge l'infrastructure, la dockerisation et le
+						déploiement, ce qui m'a permis de me concentrer sur la qualité du produit côté
+						utilisateur.
+					</p>
+				</div>
+
+				<div>
+					<h2 class="font-serif text-2xl font-medium tracking-tight text-[var(--color-text)]">
+						Les fonctionnalités clés
+					</h2>
+					<div class="mt-1 h-px w-12 bg-[var(--color-forest)]" aria-hidden="true"></div>
+					<ul class="mt-6 grid gap-5 text-base leading-relaxed text-[var(--color-muted)] sm:text-lg">
+						<li>
+							<span class="font-medium text-[var(--color-text)]">Système d'événements et de challenges</span>
+							— les organisateurs créent des défis à relever pendant le festival, validés au fil de l'eau.
+						</li>
+						<li>
+							<span class="font-medium text-[var(--color-text)]">Équipes et leader system</span>
+							— les participants se regroupent, suivent leur progression, désignent un capitaine.
+						</li>
+						<li>
+							<span class="font-medium text-[var(--color-text)]">Posts et fil d'actualité</span>
+							— chaque équipe partage ses moments forts, photos et résultats.
+						</li>
+						<li>
+							<span class="font-medium text-[var(--color-text)]">Univers multi-clients</span>
+							— une isolation logique qui permet de réutiliser la plateforme pour d'autres événements sans tout reconstruire.
+						</li>
+						<li>
+							<span class="font-medium text-[var(--color-text)]">Mode showcase</span>
+							— un affichage public pour les écrans géants pendant l'événement.
+						</li>
+					</ul>
+				</div>
+
+				<div>
+					<h2 class="font-serif text-2xl font-medium tracking-tight text-[var(--color-text)]">
+						Stack technique
+					</h2>
+					<div class="mt-1 h-px w-12 bg-[var(--color-forest)]" aria-hidden="true"></div>
+					<p class="mt-6 text-base leading-relaxed text-[var(--color-muted)] sm:text-lg">
+						{/* [STACK À CONFIRMER] — premier jet à valider */}
+						Front React avec TypeScript, back Node.js, base PostgreSQL, conteneurisation Docker,
+						déploiement sur infrastructure dédiée par l'équipe ops.
+					</p>
+				</div>
+
+				<div>
+					<h2 class="font-serif text-2xl font-medium tracking-tight text-[var(--color-text)]">
+						Ce que ça a apporté
+					</h2>
+					<div class="mt-1 h-px w-12 bg-[var(--color-forest)]" aria-hidden="true"></div>
+					<p class="mt-6 text-base leading-relaxed text-[var(--color-muted)] sm:text-lg">
+						{/* [IMPACT À CONFIRMER] — chiffres réels à remplir */}
+						Une plateforme utilisée par plusieurs milliers de participants pendant les 24h du
+						festival, avec un fort taux d'engagement sur les défis et les posts. La logique
+						multi-univers permet aujourd'hui de la redéployer pour d'autres événements.
+					</p>
+				</div>
+			</div>
+		</section>
+	</article>
+
+	<CtaBanner
+		title="Un projet en tête ?"
+		subtitle="Le même soin appliqué à votre activité, en plus simple et plus rapide."
+		ctaLabel="Discutons de votre projet"
+		ctaHref="/contact"
+	/>
+</BaseLayout>

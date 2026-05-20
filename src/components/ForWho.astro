@@ -1,0 +1,34 @@
+---
+const audiences = [
+	{
+		title: "Indépendants",
+		body: "Avocats, kinés, ostéopathes, artisans, consultants.",
+	},
+	{
+		title: "Associations locales",
+		body: "Clubs, collectifs, fondations qui veulent exister en ligne.",
+	},
+	{
+		title: "TPE et PME",
+		body: "Petites structures qui ont besoin d'un site qui convertit.",
+	},
+];
+---
+
+<section id="pour-qui" class="border-b border-[var(--color-line)] bg-[var(--color-surface)]">
+	<div class="mx-auto max-w-5xl px-6 py-20 sm:py-24">
+		<h2 class="font-serif text-2xl font-medium tracking-tight text-[var(--color-text)] sm:text-3xl">
+			Pour qui je travaille
+		</h2>
+		<div class="mt-1 h-px w-12 bg-[var(--color-forest)]" aria-hidden="true"></div>
+
+		<ul class="mt-12 grid gap-8 sm:grid-cols-3">
+			{audiences.map((item) => (
+				<li>
+					<p class="font-serif text-xl font-medium text-[var(--color-text)]">{item.title}</p>
+					<p class="mt-2 text-base text-[var(--color-muted)]">{item.body}</p>
+				</li>
+			))}
+		</ul>
+	</div>
+</section>

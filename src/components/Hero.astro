@@ -1,0 +1,43 @@
+---
+import Button from "./Button.astro";
+
+// 3 variantes d'accroche — la V1 est utilisée par défaut.
+// VARIANTE 1 (par défaut, retenue) :
+//   "Quand vos clients vous cherchent sur Google, ils doivent vous trouver — pas vos concurrents."
+// VARIANTE 2 :
+//   "Vos futurs clients sont sur Google. Encore faut-il qu'ils tombent sur vous."
+// VARIANTE 3 :
+//   "Un bon professionnel invisible en ligne reste un professionnel sans clients."
+---
+
+<section class="border-b border-[var(--color-line)]">
+	<div
+		class="mx-auto flex min-h-[calc(100svh-4.5rem)] max-w-5xl flex-col justify-center px-6 py-20 sm:py-28"
+	>
+		<div class="max-w-3xl">
+			<p class="mb-6 text-sm font-medium uppercase tracking-[0.18em] text-[var(--color-forest)]">
+				Sites web · SEO local
+			</p>
+
+			<h1
+				class="font-serif text-4xl font-medium leading-[1.1] tracking-tight text-[var(--color-text)] text-balance sm:text-5xl md:text-6xl"
+			>
+				Quand vos clients vous cherchent sur Google,
+				<span class="text-[var(--color-ink)]">ils doivent vous trouver</span>
+				— pas vos concurrents.
+			</h1>
+
+			<p
+				class="mt-8 max-w-2xl text-lg leading-relaxed text-[var(--color-muted)] text-pretty sm:text-xl"
+			>
+				Sites internet et référencement local pour indépendants, PME et associations.
+				Sobre, rapide, conçu pour être trouvé.
+			</p>
+
+			<div class="mt-10 flex flex-col gap-3 sm:flex-row sm:items-center">
+				<Button href="/contact" variant="primary">Discuter de votre projet</Button>
+				<Button href="/projet-phare" variant="secondary">Voir une réalisation</Button>
+			</div>
+		</div>
+	</div>
+</section>

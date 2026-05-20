@@ -1,0 +1,116 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import CtaBanner from "../components/CtaBanner.astro";
+import { PERSON_JSONLD } from "../lib/site";
+---
+
+<BaseLayout
+	title="À propos — Tom Goarin, ingénieur télécoms (INSA Lyon)"
+	description="Ingénieur télécoms en alternance à Lyon. Je conçois des sites web sobres et rapides pour les indépendants, PME et associations qui veulent être trouvés sur Google."
+	ogType="profile"
+	jsonLd={PERSON_JSONLD}
+>
+	<article>
+		<header class="border-b border-[var(--color-line)]">
+			<div class="mx-auto max-w-3xl px-6 py-20 sm:py-28">
+				<p class="text-sm font-medium uppercase tracking-[0.18em] text-[var(--color-forest)]">
+					À propos
+				</p>
+				<h1
+					class="mt-4 font-serif text-4xl font-medium leading-[1.1] tracking-tight text-[var(--color-text)] text-balance sm:text-5xl"
+				>
+					Ingénieur télécoms, développeur web à Lyon.
+				</h1>
+				<p class="mt-6 text-lg leading-relaxed text-[var(--color-muted)] sm:text-xl">
+					Je m'appelle Tom Goarin. Je conçois des sites internet et je m'occupe du référencement
+					local pour les indépendants, PME et associations qui veulent exister en ligne sans
+					subir un template générique.
+				</p>
+			</div>
+		</header>
+
+		<section class="border-b border-[var(--color-line)] bg-[var(--color-surface)]">
+			<div class="mx-auto grid max-w-3xl gap-16 px-6 py-20 sm:py-24">
+				<div class="grid gap-10 sm:grid-cols-5 sm:items-start">
+					<div class="sm:col-span-2">
+						<div
+							class="aspect-square w-full max-w-[280px] rounded-sm border border-[var(--color-line)] bg-[var(--color-paper)] flex items-center justify-center"
+							aria-label="Photo de Tom Goarin"
+						>
+							{/* [PHOTO À AJOUTER] — format carré, ~600x600px, WebP */}
+							<span class="text-xs uppercase tracking-[0.18em] text-[var(--color-faint)]">
+								Photo à venir
+							</span>
+						</div>
+					</div>
+
+					<div class="sm:col-span-3">
+						<h2 class="font-serif text-2xl font-medium tracking-tight text-[var(--color-text)]">
+							Mon parcours
+						</h2>
+						<div class="mt-1 h-px w-12 bg-[var(--color-forest)]" aria-hidden="true"></div>
+
+						<div class="mt-6 grid gap-5 text-base leading-relaxed text-[var(--color-muted)] sm:text-lg">
+							<p>
+								Je termine mon cursus d'ingénieur en télécommunications à l'INSA Lyon, école
+								publique d'ingénieurs en cinq ans. Cette dernière année, je suis en alternance
+								chez Coexya, une société de conseil tech lyonnaise spécialisée dans le moteur
+								de recherche d'entreprise.
+							</p>
+							<p>
+								Au quotidien, je travaille sur des projets de recherche d'information en
+								environnement professionnel (Sinequa, Jalios) et sur l'entraînement de modèles
+								de langage sur des données d'entreprise. Un terrain exigeant, qui m'a appris à
+								livrer du logiciel sérieux dans des contraintes réelles.
+							</p>
+							<p>
+								En parallèle, j'ai été lead développeur sur <a
+									href="/projet-phare"
+									class="text-[var(--color-forest)] underline decoration-1 underline-offset-4 hover:text-[var(--color-forest-2)]"
+									>Sheeesh</a
+								>, l'application événementielle des 24h de l'INSA Lyon, déployée pour plusieurs
+								milliers de participants. J'ai aussi passé un semestre d'échange à Lima, au
+								Pérou, en espagnol — l'occasion de travailler dans un contexte radicalement
+								différent et d'en revenir avec une certaine humilité sur la conduite de projet.
+							</p>
+						</div>
+					</div>
+				</div>
+
+				<div>
+					<h2 class="font-serif text-2xl font-medium tracking-tight text-[var(--color-text)]">
+						Pourquoi moi
+					</h2>
+					<div class="mt-1 h-px w-12 bg-[var(--color-forest)]" aria-hidden="true"></div>
+
+					<div class="mt-6 grid gap-5 text-base leading-relaxed text-[var(--color-muted)] sm:text-lg">
+						<p>
+							Un site web qui sert votre activité, ce n'est pas un sujet de design — c'est un
+							sujet d'ingénierie. Performance, structure du contenu, balisage sémantique,
+							référencement : autant de détails techniques qui décident si Google vous montre
+							ou pas.
+						</p>
+						<p>
+							Je travaille seul, avec une structure légère. Pas d'agence, pas de chef de
+							projet, pas de couches intermédiaires. Vous parlez directement à celui qui code.
+							C'est ce qui me permet d'aligner des prix raisonnables sur un travail
+							d'ingénieur.
+						</p>
+						<p>
+							Et parce que je suis encore en école, je vous propose un engagement honnête : un
+							travail rigoureux, des décisions techniques justifiées, et un suivi qui ne
+							s'arrête pas à la mise en ligne.
+						</p>
+					</div>
+				</div>
+			</div>
+		</section>
+	</article>
+
+	<CtaBanner
+		title="On en parle ?"
+		subtitle="Décrivez-moi votre activité en quelques lignes. Je vous réponds rapidement."
+		ctaLabel="Me contacter"
+		ctaHref="/contact"
+	/>
+</BaseLayout>
